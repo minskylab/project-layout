@@ -1,0 +1,13 @@
+version: "3"
+
+dotenv: [".env"]
+
+tasks:
+  temp-build:
+    cmds:
+      - go build -v -o /tmp/hasura-auth-webhook cmd/_your_app_/*
+
+  start:
+    cmds:
+      - task: temp-build
+      - /tmp/hasura-auth-webhook
