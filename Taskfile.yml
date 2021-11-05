@@ -5,9 +5,9 @@ dotenv: [".env"]
 tasks:
   temp-build:
     cmds:
-      - go build -v -o /tmp/hasura-auth-webhook cmd/_your_app_/*
+      - go build -v -o /tmp/your_app cmd/_your_app_/*
 
   start:
     cmds:
       - task: temp-build
-      - /tmp/hasura-auth-webhook
+      - /tmp/your_app
